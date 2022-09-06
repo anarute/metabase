@@ -65,11 +65,3 @@ export const isActionButtonDashCard = (dashCard: DashboardOrderedCard) =>
   isActionButtonCard(
     dashCard.visualization_settings?.virtual_card as SavedCard,
   );
-
-export const isActionButtonWithMappedAction = (
-  dashCard: DashboardOrderedCard,
-) => {
-  return (
-    isActionButtonDashCard(dashCard) && typeof dashCard.action_id === "number"
-  );
-};
